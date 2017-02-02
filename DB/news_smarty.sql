@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 02, 2017 at 11:27 AM
+-- Generation Time: Feb 02, 2017 at 08:55 PM
 -- Server version: 5.5.53-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.20
 
@@ -54,15 +54,19 @@ CREATE TABLE IF NOT EXISTS `news` (
   `cat_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `cat_id` (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `short_note`, `note`, `auther_id`, `active`, `slider`, `pic_url`, `like_count`, `visit`, `cat_id`) VALUES
-(1, 'تست ۱', 'این یک تست است', 'این یک تست است', 1, 1, 0, NULL, 1, 1, 1),
-(2, 'تست ۱', 'این یک تست است', 'این یک تست است', 1, 1, 0, NULL, 1, 1, 1);
+(1, 'تست ۱', 'این یک تست است', 'این یک تست است', 1, 1, 0, 'test', 1, 1, 1),
+(2, 'تست ۱', 'این یک تست است خالی مینده', '<p>این یک تست است&nbsp;</p>\r\n', 1, 1, 1, NULL, 1, 1, 2),
+(4, 'TEst', 'test', '<p>test</p>\r\n', NULL, NULL, 1, 'photo_2016-10-12_16-31-22.jpg', 0, 0, 1),
+(5, 'Test add', 'test', '', NULL, NULL, 0, 'photo_2016-09-23_10-07-36.jpg', 0, 0, 2),
+(6, 'Test', 'test short note', '<p>hgg</p>\r\n', NULL, NULL, 0, 'photo_2016-09-23_10-07-36.jpg', 0, 0, 1),
+(8, 'Test', 'شسی', '<p>hgg</p>\r\n', NULL, NULL, 0, 'photo_2016-09-23_10-07-36.jpg', 0, 0, 3);
 
 -- --------------------------------------------------------
 
@@ -74,18 +78,20 @@ CREATE TABLE IF NOT EXISTS `news_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `describtion` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `active` int(11) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `news_category`
 --
 
-INSERT INTO `news_category` (`id`, `name`, `describtion`) VALUES
-(1, 'سیاسی', 'دسته بندی اخبار سیاسی'),
-(2, 'اقتصادی', 'دسته بندی اخبار اقتصادی'),
-(3, 'سیاسی', 'دسته بندی اخبار سیاسی'),
-(4, 'اقتصادی', 'دسته بندی اخبار اقتصادی');
+INSERT INTO `news_category` (`id`, `name`, `describtion`, `active`) VALUES
+(1, 'سیاسی', 'دسته بندی اخبار سیاسی', 1),
+(2, 'اقتصادی', 'دسته بندی اخبار اقتصادی', 0),
+(3, 'سیاسی', 'دسته بندی اخبار سیاسی', 0),
+(4, 'اقتصادی', 'دسته بندی اخبار اقتصادی', 0),
+(6, 'MrMostafa', 'test', 1);
 
 -- --------------------------------------------------------
 
@@ -101,7 +107,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `create_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `create_at`) VALUES
+(2, 'test2', 'test2@test.test', '098f6bcd4621d373cade4e832627b4f6', NULL),
+(6, 'test 12', 'test123@test.com', '098f6bcd4621d373cade4e832627b4f6', NULL);
 
 --
 -- Constraints for dumped tables

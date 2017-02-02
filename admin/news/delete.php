@@ -1,11 +1,11 @@
 <?php
 require '../../core/core.php';
 
-if(isset($_GET['delete_id'])){
-	$sql = "delete from news where id ='".$_GET['delete_id']."'";
+if(isset($_POST['delete_id']) && !empty($_POST['delete_id'])){
+	$sql = "delete from news where id ='".$_POST['delete_id']."'";
 	$r = mysqli_query($link,$sql);
 	if($r){
-		header("Location:admin/news/news.php");
+		header("Location:news.php");
 	}
 }
-
+header("Location:news.php");

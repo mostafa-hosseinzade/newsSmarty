@@ -2,6 +2,10 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/{$base_url}/public/css/bootstrap.rtl.css" />
+        <link href="/{$base_url}/public/css/css-datatable.css" rel="stylesheet">
+        <script src="/{$base_url}/public/js/jquery.js"></script>
+        <script src="/{$base_url}/public/js/jquery-datatable.js"></script>
+        <script src="/{$base_url}/public/js/datatable.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-default">
@@ -14,7 +18,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#">NEWS WEBSITE</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,23 +27,10 @@
                         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                         <li><a href="/{$base_url}/admin/news/news.php">News</a></li>
                         <li >
-                            <a href="/{$base_url}/admin/news_category.php">News Category</a>
+                            <a href="/{$base_url}/admin/newsctg/newsctg.php">News Category</a>
                         </li>
                         <li>
-                            <a href="/{$base_url}/admin/users.php">Users</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
+                            <a href="/{$base_url}/admin/users/users.php">Users</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

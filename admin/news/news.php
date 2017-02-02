@@ -2,12 +2,18 @@
 
 require '../../core/core.php';
 
-$q_userlist = mysqli_query($link,"select * from news");
+$q_newslist = mysqli_query($link,"select * from news");
 $data = [];
-while($row =mysqli_fetch_array($q_userlist)){
-	$data[] = $row;
+while($row =mysqli_fetch_array($q_newslist)){
+	$data['newslist'][] = $row;
 }
-$smarty->assign("newslist",$data);
+
+$q_cat = mysqli_query($link, "select * from news_category");
+while($row =mysqli_fetch_array($q_cat)){
+	$data['catlist'][] = $row;
+}
+
+$smarty->assign("data",$data);
 $smarty->assign("page","./news/newslist.tpl");
 $smarty->display('admin/base.tpl');
 ?>
