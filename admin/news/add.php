@@ -22,8 +22,10 @@ if ($_POST) {
             echo "Sorry, there was an error uploading your file.";
         }
     }
-    $sql = "insert into news(title,short_note,note,cat_id,pic_url,slider) values ('".$title."','"
-            .$short_note."','".$note."','".$cat_id."','".$pic."','".$slider."')";
+    $date_now = new DateTime();
+    $date_now = $date_now->format("Y-m-d h:i:s");
+    $sql = "insert into news(title,short_note,note,cat_id,pic_url,slider,created_at) values ('".$title."','"
+            .$short_note."','".$note."','".$cat_id."','".$pic."','".$slider."','".$date_now."')";
     $result = mysqli_query($link, $sql);
     echo 'All its add';
     if($result){
