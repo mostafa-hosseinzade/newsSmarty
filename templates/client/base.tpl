@@ -33,8 +33,8 @@
                     <div class="mbr-table">
                         <div class="mbr-table-cell">
                             <div class="navbar-brand">
-                                <a href="https://mobirise.com" class="navbar-logo"><img src="assets/images/logo.png" alt="Mobirise"></a>
-                                <a class="navbar-caption" href="https://mobirise.com">MOBIRISE</a>
+                                <a href="/{$base_url}" class="navbar-logo"><img src="/{$base_url}/public/img/news-icon.png" alt="Khabar Vige"></a>
+                                <a class="navbar-caption" href="/{$base_url}">Khabar Vige</a>
                             </div>
                         </div>
                         <div class="mbr-table-cell">
