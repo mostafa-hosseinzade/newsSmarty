@@ -1,8 +1,11 @@
-<section class="engine"><a rel="external" href="https://mobirise.com">simple drag and drop website building software</a></section><section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-pause="false" data-interval="5000" id="slider-1">
+<section class="engine"><a rel="external" href="https://mobirise.com">simple drag and drop website building software</a></section>
+<!-- Slider -->
+<section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-pause="false" data-interval="5000" id="slider-1">
     <div>
         <div>
             <div>
                 <ol class="carousel-indicators">
+                    <!--  Eshare gar haye payeen -->
                     {foreach $data['slider'] as $index => $item}
                         {if ($index == 0)}
                             <li data-app-prevent-settings="" data-target="#slider-1" data-slide-to="0" class="active"></li>
@@ -11,8 +14,8 @@
                             <li data-app-prevent-settings="" data-target="#slider-1" class="" data-slide-to="{$index}"></li>
                             {/if}
                         {/foreach} 
-                        {*                    <li data-app-prevent-settings="" data-target="#slider-1" class="" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#slider-1" data-slide-to="2"></li>*}
                 </ol>
+                <!-- Mohtavaye Slider Ha -->
                 <div class="carousel-inner" role="listbox">
                     {foreach $data['slider'] as $index => $item}
                         {if ($index == 0)}
@@ -71,6 +74,7 @@
     </div>
 </section>
 
+<!-- Por Bazdid tarin ha -->
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features3-3" style="background-color: rgb(255, 255, 255);">
     <div class="mbr-cards-row row">
         {foreach $data['most_visit'] as $most}
@@ -98,6 +102,7 @@
     </div>
 </section>
 
+<!-- Mohabob taring ha -->    
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features4-4" style="background-color: rgb(239, 239, 239);">
     <div class="mbr-cards-row row">
         {foreach $data['most_like'] as $like}
@@ -116,6 +121,7 @@
     </div>
 </section>
 
+    <!-- Akharin Akhbar -->
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features1-5" style="background-color: rgb(255, 255, 255);">
     <div class="mbr-cards-row row striped">
         {foreach $data['last_insert'] as $last}

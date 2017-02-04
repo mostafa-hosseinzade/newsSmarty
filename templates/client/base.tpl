@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
         <meta name="description" content="">
-
+        
+        <!--  css marbot be template -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -20,11 +21,9 @@
         <link rel="stylesheet" href="/{$base_url}/public/assets/animate.css/animate.min.css">
         <link rel="stylesheet" href="/{$base_url}/public/assets/theme/css/style.css">
         <link rel="stylesheet" href="/{$base_url}/public/assets/mobirise/css/mbr-additional.css" type="text/css">
-
-
-
     </head>
     <body>
+        <!--  Menu Ha -->
         <section id="menu-0">
 
             <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
@@ -59,9 +58,12 @@
             </nav>
 
         </section>
-
+        
+        <!-- include file mored nazar -->                    
         {include file=$page}   
-
+        
+        
+        <!-- Ertebat Ba Ma -->
         <section class="mbr-section" id="form1-8" style="background-color: rgba(0, 0, 0,0.05); padding-top: 120px; padding-bottom: 120px;">
 
             <div class="mbr-section mbr-section__container mbr-section__container--middle">
@@ -132,7 +134,7 @@
             </div>
         </footer>
 
-
+        <!-- java script haye template -->
         <script src="/{$base_url}/public/assets/web/assets/jquery/jquery.min.js"></script>
         <script src="/{$base_url}/public/assets/tether/tether.min.js"></script>
         <script src="/{$base_url}/public/assets/bootstrap/js/bootstrap.min.js"></script>

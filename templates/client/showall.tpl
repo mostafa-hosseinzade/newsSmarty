@@ -1,3 +1,4 @@
+<!-- namayesh eteleat datste bandy -->
 <section class="mbr-section article mbr-parallax-background mbr-after-navbar" id="msg-box8-c" 
          style="background-image: url(/{$base_url}/public/assets/images/desert.jpg); padding-top: 120px; padding-bottom: 120px;">
 
@@ -13,6 +14,7 @@
     </div>
 </section>
 
+<!-- namayesh tamae khabar haye in daste bandi -->            
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features3-3" style="background-color: rgb(255, 255, 255);">
     <div class="mbr-cards-row row">
         {foreach $data['allnews'] as $most}

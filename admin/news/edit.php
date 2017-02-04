@@ -11,7 +11,7 @@ $check = getimagesize($_FILES["pic_url"]["tmp_name"]);
 if(empty($_POST['title']) || empty($_POST['note'])){
     header("Location:news.php");
 }
-
+//دستور ویرایش اطلاعات
 $sql = "update news set  title ='" . $_POST['title'] . "',
 	short_note='" . $_POST['short_note'] . "' , note='" . $_POST['note'] . "',slider='".$_POST['slider']."'"
         . ",cat_id='".$_POST['ctg_id']."'"

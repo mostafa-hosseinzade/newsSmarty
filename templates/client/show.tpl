@@ -1,3 +1,4 @@
+<!-- Namayesh khabar -->
 <section class="mbr-section article mbr-parallax-background mbr-after-navbar" id="msg-box8-c" 
          style="background-image: url({if (empty($data['show']['pic_url']))}/{$base_url}/public/assets/images/desert.jpg{/if}{if (!empty($data['show']['pic_url']))}/{$base_url}/public/img/upload/{$data['show']['pic_url']}{/if}); padding-top: 120px; padding-bottom: 120px;">
 
@@ -24,6 +25,7 @@
 
 </section>
 
+<!-- Namayesh porbazdidtarin ha -->        
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features3-3" style="background-color: rgb(255, 255, 255);">
     <div class="mbr-cards-row row">
         {foreach $data['most_visit'] as $most}

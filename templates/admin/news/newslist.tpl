@@ -1,6 +1,6 @@
 <h2>خبر ها</h2>
 
-
+<!-- Namayesh Payam -->
 {if (isset($msg) && !empty($msg)) }
     <div class="alert">
         { $msg }
@@ -10,7 +10,9 @@
     </div>
 {/if} 
 
+<!-- Dokme Marbote Be Namayesh -->
 <div class="col-lg-12"><button class="pull-left btn btn-success" data-toggle="modal" data-target="#myModalCreate">Add</button></div>
+<!-- Jadval namyesh etelaAte -->
 <table class="display table-bordered" id="test">
     <thead>
     <th>Id</th>
@@ -38,7 +40,7 @@
                 <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModalDelete{$value['id']}">delete</button>
             </td>
 
-            <!-- Modal -->
+            <!-- Modal Hazfe EteleAte -->
     <div class="modal fade" id="myModalDelete{$value['id']}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -60,6 +62,7 @@
             </div>
         </div>
     </div>
+    <!-- Modal Namayesh -->
     <div class="modal fade" id="myModalShow{$value['id']}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -80,7 +83,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
+    <!-- Modal Edit EteleAte-->
     <div class="modal fade" id="myModal{$value['id']}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -152,6 +155,7 @@
 </tfoot>
 </table> 
 
+<!-- Modal Add EteleAt -->
 <div class="modal fade" id="myModalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -209,12 +213,14 @@
 
 
     <script>
+        //baray datatable
         $(document).ready(function () {
             $('#test').DataTable();
             CKEDITOR.replace("TextAreaAdd");
         });
     </script>
     <script>
+        //baraye editor
         function ck(id) {
             CKEDITOR.replace(id);
         }
