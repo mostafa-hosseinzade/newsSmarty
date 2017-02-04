@@ -1,9 +1,5 @@
 <?php
-/**
- * Example Application
- *
- * @package Example-application
- */
+
 
 require __DIR__.'/../libs/smarty/Smarty.class.php';
 
@@ -20,4 +16,18 @@ $smarty->setCompileDir('templates_c');
 
 $base_url = "Git/newsSmarty";
 $smarty->assign("base_url",$base_url);
+session_start();
 
+
+function checkLogin() {
+    global $link;
+    if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
+        $result = mysqli_query($link, "select * from users where id ='".$_SESSION['id']."'");
+        $user = mysqli_fetch_array($result);
+        if(empty($user)){
+            return false;
+        }
+        return true;
+    }
+    return false;
+}

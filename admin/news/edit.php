@@ -1,6 +1,9 @@
 <?php
 
 require '../../core/core.php';
+if(checkLogin() == false){
+    header("Location:/$base_url/login.php");
+}
 $check = false;
 if(!empty($_FILES['pic_url']['name'])){
 $check = getimagesize($_FILES["pic_url"]["tmp_name"]);

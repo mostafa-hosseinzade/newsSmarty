@@ -1,6 +1,8 @@
 <?php
-
 require '../../core/core.php';
+if(checkLogin() == false){
+    header("Location:/$base_url/login.php");
+}
 
 $q_newslist = mysqli_query($link,"select * from news");
 $data = [];

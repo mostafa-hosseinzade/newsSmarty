@@ -32,6 +32,9 @@
                         <li>
                             <a href="/{$base_url}/admin/users/users.php">Users</a>
                         </li>
+                        <li>
+                            <a href="/{$base_url}/logout.php">Log Out</a>
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

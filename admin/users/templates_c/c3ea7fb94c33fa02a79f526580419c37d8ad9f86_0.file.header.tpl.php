@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-02 20:55:24
+/* Smarty version 3.1.30, created on 2017-02-04 11:08:37
   from "/var/www/html/Git/newsSmarty/templates/admin/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58936b84817471_08358956',
+  'unifunc' => 'content_589584fd0bad10_41483849',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c3ea7fb94c33fa02a79f526580419c37d8ad9f86' => 
     array (
       0 => '/var/www/html/Git/newsSmarty/templates/admin/header.tpl',
-      1 => 1486056322,
+      1 => 1486193915,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58936b84817471_08358956 (Smarty_Internal_Template $_smarty_tpl) {
+function content_589584fd0bad10_41483849 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -69,6 +69,10 @@ function content_58936b84817471_08358956 (Smarty_Internal_Template $_smarty_tpl)
                         <li>
                             <a href="/<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 /admin/users/users.php">Users</a>
+                        </li>
+                        <li>
+                            <a href="/<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+/logout.php">Log Out</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

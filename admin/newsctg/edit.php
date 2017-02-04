@@ -1,7 +1,9 @@
 <?php
 
 require '../../core/core.php';
-
+if(checkLogin() == false){
+    header("Location:/$base_url/login.php");
+}
 if(empty($_POST['name'])){
     header("Location:newsctg.php");
 }

@@ -8,25 +8,30 @@ if(empty($_GET['id'])){
 }
 $id = $_GET['id'];
 
-
-$result = mysqli_query($link, "select * from news where id = '".$id."'");
-
+$result = mysqli_query($link, "select * from news_category where id='".$id."'");
 $result = mysqli_fetch_array($result);
 
 if(empty($result)){
     header("Location:index.php");
 }
-
 $data = array();
+$data['cat'] = $result;
 
-$data['show'] = $result;
-
-//most visit
-$result = mysqli_query($link, "select * from news order by visit desc limit 4");
-
+$result = mysqli_query($link, "select * from news where cat_id = '".$id."'");
 while ($row = mysqli_fetch_array($result)) {
-    $data['most_visit'][]=$row;
+    $data['allnews'][]=$row;
 }
+
+if(empty($data['allnews'])){
+    header("Location:index.php");
+}
+
+////most visit
+//$result = mysqli_query($link, "select * from news order by visit desc limit 4");
+//
+//while ($row = mysqli_fetch_array($result)) {
+//    $data['most_visit'][]=$row;
+//}
 //menu 
 $result = mysqli_query($link, "select * from news_category");
 while ($row = mysqli_fetch_array($result)) {
@@ -35,6 +40,6 @@ while ($row = mysqli_fetch_array($result)) {
 
 $smarty->assign("data",$data);
 
-$smarty->assign("page","client/show.tpl");
+$smarty->assign("page","client/showall.tpl");
 
 $smarty->display("client/base.tpl");

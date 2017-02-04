@@ -1,5 +1,3 @@
-
-
 <section class="engine"><a rel="external" href="https://mobirise.com">simple drag and drop website building software</a></section><section class="mbr-slider mbr-section mbr-section__container carousel slide mbr-section-nopadding mbr-after-navbar" data-ride="carousel" data-keyboard="false" data-wrap="true" data-pause="false" data-interval="5000" id="slider-1">
     <div>
         <div>
@@ -97,12 +95,10 @@
                 </div>
             </div>
         {/foreach}  
-
     </div>
 </section>
 
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features4-4" style="background-color: rgb(239, 239, 239);">
-
     <div class="mbr-cards-row row">
         {foreach $data['most_like'] as $like}
             <div class="mbr-cards-col col-xs-12 col-lg-4" style="padding-top: 80px; padding-bottom: 80px;">
@@ -121,9 +117,6 @@
 </section>
 
 <section class="mbr-cards mbr-section mbr-section-nopadding" id="features1-5" style="background-color: rgb(255, 255, 255);">
-
-
-
     <div class="mbr-cards-row row striped">
         {foreach $data['last_insert'] as $last}
             <div class="mbr-cards-col col-xs-12 col-lg-3" style="padding-top: 80px; padding-bottom: 80px;">
@@ -146,9 +139,6 @@
                 </div>
             </div>
             {/foreach}
-            
-
-
         </div>
 </section>
 
