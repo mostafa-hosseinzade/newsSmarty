@@ -17,8 +17,9 @@ $result = mysqli_fetch_array($result);
 if (empty($result)) {
     header("Location:index.php");
 }
-if (!isset($_COOKIE['firsttime'])) {
-    setcookie("firsttime", "no", 12000);
+
+if (!isset($_COOKIE['firsttime'.$id])) {
+     setcookie("firsttime".$id, "no", time()+(10* 3600));
     $sql = "update news as s set s.visit=s.visit+1 where id = '" . $id."'";
     mysqli_query($link,$sql);
 }
