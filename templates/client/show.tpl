@@ -20,6 +20,11 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-12 lead"><p>{$data['show']['note']}</p></div>
+            <div class="col-lg-12">
+                <a class="btn btn-primary" href="/{$base_url}/like.php?id={$data['show']['id']}">Like</a>
+                <b>تعداد نمایش</b> : <b>{$data['show']['visit']}</b>
+                <b>تعداد لایک</b> : <b>{$data['show']['like_count']}</b>
+            </div>
         </div>
     </div>
 
